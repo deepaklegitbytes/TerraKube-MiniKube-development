@@ -7,7 +7,7 @@ RUN yarn
 COPY . .
 
 # Increase Node.js memory limit to prevent out of memory errors
-ENV NODE_OPTIONS="--max-old-space-size=4096"
+ENV NODE_OPTIONS="--max-old-space-size=8192"
 
 RUN yarn build
 

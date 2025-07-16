@@ -2,8 +2,9 @@ import { User } from "oidc-client-ts";
 
 export function getUserFromStorage(): User | null {
   const oidcStorage = localStorage.getItem(
-    `oidc.user:${window._env_.REACT_APP_AUTHORITY}:${window._env_.REACT_APP_CLIENT_ID}`
+    `oidc.user:https://terrakube-dex.platform.local/dex:terrakube-app`
   );
+  console.log("OIDC storage item:", oidcStorage);
   if (!oidcStorage) {
     return null;
   }

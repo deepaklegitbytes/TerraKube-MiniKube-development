@@ -1,11 +1,11 @@
 .login-wrapper {
-  width: 328px;
+  width: 380px;
   margin: 0px auto;
   padding-top: 200px;
 }
 
 .login-container {
-  background-image: url(/background-image.svg);
+  /* background-image: url(/background-image.svg); */
   background-repeat: no-repeat;
   background-position: center 110px;
   background-size: 100%;
@@ -13,6 +13,31 @@
 }
 
 .loginLogo {
-  width: 230px;
-  text-align: center;
+  width: 120px;
+  text-align: left;
+}
+.button{
+  /* padding-left: 20px; */
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74);
+}
+.button:hover {
+  /* Apply the same background color on hover */
+  background-color: rgb(22 163 74);
+  /* You might also want to remove any default hover effects like cursor change if not desired */
+  /* cursor: default; */
+}
+.card{
+  background-color: rgb(31 41 55);
+  color: whitesmoke;
+}
+/* Target the header border within the Card */
+.my-custom-card .ant-card-head {
+  border-bottom-color:rgb(55 65 81); /* Remove the bottom border of the header */
+}
+
+/* If you need to remove the whole border of the card itself */
+.my-custom-card.ant-card {
+  /* border: none !important; */
+  border-color:rgb(55 65 81);
 }

@@ -85,10 +85,11 @@ export default function WorkspaceFilter({ workspaces, onFiltered, organizationId
 
   return (
     <Card
-      style={{ marginTop: "10px", background: colorBgContainer }}
+      style={{ marginTop: "10px"}}
       styles={{
         body: {
-          padding: "5px 10px",
+          padding: "0px 0px",
+          background: "#1F2937"
         },
       }}
     >

@@ -2,6 +2,14 @@ import { Layout, ConfigProvider } from "antd";
 import { useState, useEffect } from "react";
 import { RouterProvider, createBrowserRouter, Outlet, useParams } from "react-router-dom";
 import { useAuth } from "../../config/authConfig";
+import { Menu, Button, theme } from "antd";
+import {
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  UserOutlined,
+  VideoCameraOutlined,
+  UploadOutlined,
+} from "@ant-design/icons";
 import {
   getThemeConfig,
   ColorSchemeOption,
@@ -21,14 +29,14 @@ import { ImportWorkspace } from "../Workspaces/Import";
 import "./App.css";
 import MainMenu from "./MainMenu";
 import { ProfilePicture } from "./ProfilePicture";
-import logo from "./white_logo.png";
+import logo from "./earthling-logo.png";
 import { UserSettingsPage } from "@/modules/user/UserSettingsPage";
 import OrganizationsPickerPage from "@/modules/organizations/OrganizationsPickerPage";
 import OrganizationsDetailPage from "@/modules/organizations/OrganizationDetailsPage";
 import { ORGANIZATION_ARCHIVE, ORGANIZATION_NAME } from "../../config/actionTypes";
 import axiosInstance from "../../config/axiosConfig";
-const { Header, Footer } = Layout;
-
+const { Sider, Header, Content, Footer } = Layout;
+import codeOpsLogo from "./CodeOps-logo.svg";
 // Helper component to extract URL parameters for collection routes
 const CollectionSettingsWrapper = ({ mode }: { mode: "edit" | "detail" }) => {
   const { collectionid } = useParams();
@@ -40,7 +48,13 @@ const App = () => {
   const [organizationName, setOrganizationName] = useState<string>("");
   const [colorScheme, setColorScheme] = useState<ColorSchemeOption>(defaultColorScheme);
   const [themeMode, setThemeMode] = useState<ThemeMode>(defaultThemeMode);
+  const [collapsed, setCollapsed] = useState<boolean>(false);
   const expiry = auth?.user?.expires_at;
+
+  // Ant Design theme token for background color
+  const {
+    token: { colorBgContainer, borderRadiusLG },
+  } = theme.useToken();
 
   useEffect(() => {
     // Load color scheme and theme mode preferences from localStorage
@@ -99,37 +113,83 @@ const App = () => {
   }
 
   if (!auth.isAuthenticated) {
+    console.warn("User is not authenticated, redirecting to login");
     return <Login />;
   }
+
+  const LayoutWrapper = () => (
+  <ConfigProvider>
+    <Layout style={{ border: "1px solid #1F2937" }}>
+      <Sider
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+        style={{
+          borderRight: "1px solid #1F2937",
+          // background: "#0f172a",
+        }}
+      >
+        <div className="demo-logo-vertical" />
+        <a>
+          <img
+            className="logo"
+            src={codeOpsLogo}
+            alt="Logo"
+            height={80}
+            // width={80}
+          />
+        </a>
+        <MainMenu
+          organizationName={organizationName}
+          setOrganizationName={setOrganizationName}
+          themeMode={themeMode}
+        />
+      </Sider>
+
+      <Layout style={{ borderLeft: "1px solid #1F2937" }}>
+        <Header
+          style={{
+            padding: 0,
+            borderBottom: "1px solid #1F2937",
+            background: "#111827",
+          }}
+        >
+          <div style={{ float: "right", display: "flex", alignItems: "center",margin:"15px" }}>
+            <ProfilePicture />
+          </div>
+        </Header>
+
+        <Content
+          style={{
+            minHeight: 280,
+            background: colorBgContainer,
+            border: "0px solid #1F2937",
+            // margin: 16,
+            borderRadius: borderRadiusLG,
+          }}
+        >
+          <Outlet />
+        </Content>
+
+        <Footer
+          style={{
+            textAlign: "center",
+            backgroundColor: "#111827",
+            borderTop: "1px solid #1F2937",
+          }}
+        >
+          CodeOps {window._env_.REACT_APP_TERRAKUBE_VERSION} ©{new Date().getFullYear()}
+        </Footer>
+      </Layout>
+    </Layout>
+  </ConfigProvider>
+);
+
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: (
-        <ConfigProvider theme={getThemeConfig(colorScheme, themeMode)}>
-          <Layout className="layout mh-100">
-            <Header>
-              <a>
-                <img className="logo" src={logo} alt="Logo"></img>
-              </a>
-              <div className="menu">
-                <MainMenu
-                  organizationName={organizationName}
-                  setOrganizationName={setOrganizationName}
-                  themeMode={themeMode}
-                />
-              </div>
-              <div className="user">
-                <ProfilePicture />
-              </div>
-            </Header>
-            <Outlet />
-            <Footer style={{ textAlign: "center" }}>
-              Terrakube {window._env_.REACT_APP_TERRAKUBE_VERSION} ©{new Date().getFullYear()}
-            </Footer>
-          </Layout>
-        </ConfigProvider>
-      ),
+      element: <LayoutWrapper />,
       children: [
         {
           path: "/",

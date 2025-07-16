@@ -20,6 +20,6 @@ export const useAuth = (): AuthContextProps => {
       "AuthProvider context is undefined, please verify you are calling useAuth() as child of a <AuthProvider> component."
     );
   }
-
+  console.log("Auth context:", context);
   return context;
 };

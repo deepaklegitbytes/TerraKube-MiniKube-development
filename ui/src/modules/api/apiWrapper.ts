@@ -6,7 +6,7 @@ const BASE_API_URL = new URL(window._env_.REACT_APP_TERRAKUBE_API_URL).origin;
 
 const defaultRequestOptions: RequestOptions = {
   requireAuth: true,
-  contentType: "application/vnd.api+json",
+  contentType: "application/json, text/plain, */*",
 };
 
 function getOptions(options?: RequestOptions): RequestOptions {
@@ -23,7 +23,9 @@ async function requestWrapper<T>(
 ): Promise<ApiResponse<T>> {
   try {
     if (requireAuth) {
+
       const tokenModel = getUserFromStorage();
+      console.warn("Token model from storage:", tokenModel);
       if (tokenModel?.access_token === undefined || tokenModel?.access_token === null) {
         return {
           isError: true,
@@ -34,6 +36,7 @@ async function requestWrapper<T>(
           responseCode: 404,
         };
       }
+      console.log("Using access token for API request", tokenModel.access_token);
       return await requestFunc(tokenModel.access_token);
     }
     return await requestFunc();

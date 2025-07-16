@@ -32,13 +32,13 @@ export default function PageWrapper({
   fluid,
 }: Props) {
   const {
-    token: { colorBgContainer },
+    token: { colorBgContainer,colorBorderSecondary,colorText },
   } = theme.useToken();
 
   return (
-    <Content className="page-wrapper">
+    <Content className="page-wrapper" style={{color:colorText }}>
       {breadcrumbs && (
-        <Breadcrumb className="page-wrapper-crumbs">
+        <Breadcrumb className="page-wrapper-crumbs" style={{color:colorText}}>
           {breadcrumbs.map((bc) => (
             <Breadcrumb.Item key={bc.path}>
               <NavLink to={bc.path}>{bc.label}</NavLink>
@@ -46,7 +46,7 @@ export default function PageWrapper({
           ))}
         </Breadcrumb>
       )}
-      <div className="page-wrapper-content" style={{ background: colorBgContainer }}>
+      <div className="page-wrapper-content" style={{ background: "rgb(55 65 81)",color:colorText }}>
         <div
           className={clsx(
             "page-wrapper-inner",
@@ -59,7 +59,7 @@ export default function PageWrapper({
           <Flex justify="space-between" flex={1}>
             <div>
               <Typography.Title className="page-wrapper-title">{title}</Typography.Title>
-              {subTitle && <Typography.Text type="secondary">{subTitle}</Typography.Text>}
+              {subTitle && <Typography.Text >{subTitle}</Typography.Text>}
             </div>
             {actions}
           </Flex>
