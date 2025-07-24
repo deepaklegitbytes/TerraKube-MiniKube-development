@@ -36,7 +36,7 @@ import OrganizationsDetailPage from "@/modules/organizations/OrganizationDetails
 import { ORGANIZATION_ARCHIVE, ORGANIZATION_NAME } from "../../config/actionTypes";
 import axiosInstance from "../../config/axiosConfig";
 const { Sider, Header, Content, Footer } = Layout;
-import codeOpsLogo from "./CodeOps-logo.svg";
+import codeOpsLogo from "./Mediamodifier-Design (2).svg";
 // Helper component to extract URL parameters for collection routes
 const CollectionSettingsWrapper = ({ mode }: { mode: "edit" | "detail" }) => {
   const { collectionid } = useParams();
@@ -112,10 +112,10 @@ const App = () => {
     localStorage.clear();
   }
 
-  if (!auth.isAuthenticated) {
-    console.warn("User is not authenticated, redirecting to login");
-    return <Login />;
-  }
+  // if (!auth.isAuthenticated) {
+  //   console.warn("User is not authenticated, redirecting to login");
+  //   return <Login />;
+  // }
 
   const LayoutWrapper = () => (
   <ConfigProvider>
@@ -127,18 +127,9 @@ const App = () => {
         style={{
           borderRight: "1px solid #1F2937",
           // background: "#0f172a",
+          marginTop: "64px",
         }}
       >
-        <div className="demo-logo-vertical" />
-        <a>
-          <img
-            className="logo"
-            src={codeOpsLogo}
-            alt="Logo"
-            height={80}
-            // width={80}
-          />
-        </a>
         <MainMenu
           organizationName={organizationName}
           setOrganizationName={setOrganizationName}
@@ -152,8 +143,20 @@ const App = () => {
             padding: 0,
             borderBottom: "1px solid #1F2937",
             background: "#111827",
+            marginLeft:"-200px"
           }}
-        >
+        >  
+        <div className="demo-logo-vertical" />
+        <a className="image-crop">
+          <img
+            className="logo"
+            src={codeOpsLogo}
+            alt="Logo"
+            height={80}
+            
+            // width={80}
+          />
+        </a>
           <div style={{ float: "right", display: "flex", alignItems: "center",margin:"15px" }}>
             <ProfilePicture />
           </div>

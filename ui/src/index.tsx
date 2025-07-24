@@ -43,6 +43,8 @@ root.render(
             },
             Menu: {
               itemColor: "#e5e7eb",
+              darkItemBg:"#111827",
+              darkSubMenuItemBg:"#111827",
               itemHoverColor: "#ffffff",
               darkItemHoverBg: "#1F2937",
               darkItemSelectedColor: "#111827",

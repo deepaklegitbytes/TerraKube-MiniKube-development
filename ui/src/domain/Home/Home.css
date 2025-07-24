@@ -6,9 +6,10 @@
 
 .logo {
   float: left;
-  width: 177px;
-  margin-top: 16px;
+  width: 250px;
+  margin-top: -13px;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .user {
