@@ -92,7 +92,7 @@ export const CreateOrganization = ({ setOrganizationName }: Props) => {
           },
         ]}
       />
-      <div className="site-layout-content" style={{ background: colorBgContainer }}>
+      <div className="site-layout-content" >
         <div className="createOrganization">
           <h1>Create a new organization</h1>
           <div>

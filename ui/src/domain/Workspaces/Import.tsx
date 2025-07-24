@@ -394,7 +394,7 @@ export const ImportWorkspace = () => {
         ]}
       />
 
-      <div className="site-layout-content" style={{ background: colorBgContainer }}>
+      <div className="site-layout-content" >
         <div className="importWorkspace">
           <h2>Import Workspaces</h2>
           <div className="App-text">

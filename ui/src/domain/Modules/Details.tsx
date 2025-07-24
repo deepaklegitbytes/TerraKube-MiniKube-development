@@ -309,7 +309,7 @@ export const ModuleDetails = ({ organizationName }: Props) => {
         ]}
       />
 
-      <div className="site-layout-content" style={{ background: colorBgContainer }}>
+      <div className="site-layout-content" >
         {loading || !module ? (
           <Spin spinning={loading} tip="Loading Module...">
             <p style={{ marginTop: "50px" }}></p>
@@ -473,7 +473,7 @@ export const ModuleDetails = ({ organizationName }: Props) => {
                         label: "Readme",
                         key: "1",
                         children: (
-                          <div className="markdown-body" style={{ backgroundColor: colorBgContainer }}>
+                          <div className="markdown-body">
                             <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
                           </div>
                         ),

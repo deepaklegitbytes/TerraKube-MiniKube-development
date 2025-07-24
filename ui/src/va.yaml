@@ -1,0 +1,34 @@
+  GNU nano 7.2                                                              values.yaml                                                                       
+    annotations:
+      nginx.ingress.kubernetes.io/use-regex: "true"
+  api:
+    enabled: true
+    domain: "api.legitsigma.com"
+    path: "/"
+    pathType: "Prefix"
+    tlsSecretName: mkcert
+    ingressClassName: "nginx"
+    annotations:
+      nginx.ingress.kubernetes.io/use-regex: "true"
+      nginx.ingress.kubernetes.io/proxy-set-headers: "terrakube/custom-headers"
+  registry:
+    enabled: true
+    domain: "reg.legitsigma.com"
+    path: "/"
+    pathType: "Prefix"
+    tlsSecretName: mkcert
+    ingressClassName: "nginx"
+    annotations:
+      nginx.ingress.kubernetes.io/use-regex: "true"
+      nginx.ingress.kubernetes.io/proxy-set-headers: "terrakube/custom-headers"
+  dex:
+    enabled: true
+    path: "/dex/"
+    pathType: "Prefix"
+    annotations:
+      nginx.ingress.kubernetes.io/use-regex: "true"
+      nginx.ingress.kubernetes.io/proxy-set-headers: "terrakube/custom-headers"
+
+
+^G Help          ^O Write Out     ^W Where Is      ^K Cut           ^T Execute       ^C Location      M-U Undo         M-A Set Mark     M-] To Bracket
+^X Exit          ^R Read File     ^\ Replace       ^U Paste         ^J Justify       ^/ Go To Line    M-E Redo         M-6 Copy         ^Q Where Was

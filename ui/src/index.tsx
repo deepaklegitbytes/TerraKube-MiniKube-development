@@ -24,7 +24,7 @@ root.render(
             colorPrimary: "#4dd69b",
             colorLink: "#4dd69b",
             colorText: "#f4f4f5", //white text
-             colorTextDescription: "#9CA3AF", // red description text
+            colorTextDescription: "#9CA3AF", // red description text
             colorTextSecondary: "#9CA3AF",
             colorBgContainer: "#111827",
             colorBorderSecondary: "#1F2937",

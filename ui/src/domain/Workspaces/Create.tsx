@@ -405,7 +405,7 @@ export const CreateWorkspace = () => {
         ]}
       />
 
-      <div className="site-layout-content" style={{ background: colorBgContainer }}>
+      <div className="site-layout-content" >
         <div className="createWorkspace">
           <h2>Create a new Workspace</h2>
           <div>

@@ -24,3 +24,9 @@ body,
 .mh-100 {
   min-height: 100%;
 }
+.ant-typography.ant-typography-secondary {
+  color: unset !important;
+}
+.site-layout-content {
+  background-color: rgb(55, 65, 81);
+}

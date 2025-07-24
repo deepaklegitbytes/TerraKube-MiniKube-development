@@ -148,12 +148,12 @@ export const OrganizationSettings = ({ selectedTab, vcsMode, collectionMode = "l
         ]}
       />
 
-      <div className="site-layout-content" style={{ background: token.colorBgContainer, paddingLeft: "0" }}>
-        <Layout style={{ background: token.colorBgContainer }}>
+      <div className="site-layout-content" style={{ paddingLeft: "0" , background: "rgb(55, 65, 81)" }}>
+        <Layout style={{ background: "rgb(55, 65, 81)" }}>
           <Sider
             width={200}
             style={{
-              background: token.colorBgContainer,
+              background: "rgb(55, 65, 81)",
               borderRight: `1px solid ${token.colorBorderSecondary}`,
               height: "100%",
               overflow: "auto",
@@ -162,7 +162,7 @@ export const OrganizationSettings = ({ selectedTab, vcsMode, collectionMode = "l
             <Menu
               mode="inline"
               selectedKeys={[activeKey]}
-              style={{ height: "100%" }}
+              style={{ height: "100%",background: "rgb(55, 65, 81)" }}
               items={menuItems}
               onClick={handleMenuClick}
             />

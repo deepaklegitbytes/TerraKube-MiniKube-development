@@ -436,7 +436,7 @@ export const WorkspaceDetails = ({ setOrganizationName, selectedTab }: Props) =>
         ]}
       />
 
-      <div className="site-layout-content" style={{ background: colorBgContainer }}>
+      <div className="site-layout-content" >
         <div className="workspaceDisplay">
           {loading || !workspace || !variables || !jobs ? (
             <Spin spinning={true} tip="Loading Workspace...">

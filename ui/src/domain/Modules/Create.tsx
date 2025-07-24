@@ -253,7 +253,7 @@ export const CreateModule = () => {
         ]}
       />
 
-      <div className="site-layout-content" style={{ background: colorBgContainer }}>
+      <div className="site-layout-content" >
         <div className="createWorkspace">
           <h2>Add Module</h2>
           <div className="App-text">
