@@ -63,7 +63,7 @@ export default function OrganizationsPickerPage() {
           <Empty
             className="page-wrapper-no-content"
             style={{ textAlign: "center" }}
-            description="You have not created any organizations yet. Create one now to get stared with Terrakube"
+            description="You have not created any organizations yet. Create one now to get stared with CodeOps."
           >
             <Button type="primary">
               <Link to="/organizations/create">Create a new organization</Link>

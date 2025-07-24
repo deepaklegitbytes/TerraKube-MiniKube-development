@@ -10,14 +10,14 @@ export const CLIDriven = ({ organizationName, workspaceName }: Props) => {
     <div>
       <h2>Waiting for configuration</h2>
       <div className="App-text">
-        This workspace currently has no Terraform configuration files associated with it. Terrakube is waiting for the
+        This workspace currently has no Terraform configuration files associated with it. CodeOps is waiting for the
         configuration to be uploaded.
       </div>
       <h3>CLI-driven workflow</h3>
       <div className="App-text">
         <ol>
           <li>
-            Ensure you are properly authenticated into Terrakube by running{" "}
+            Ensure you are properly authenticated into CodeOps by running{" "}
             <span className="code">terraform login</span> on the command line or by using a credentials block.
           </li>{" "}
           <br />

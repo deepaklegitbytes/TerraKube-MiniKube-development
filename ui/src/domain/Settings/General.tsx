@@ -77,7 +77,7 @@ export const GeneralSettings = () => {
       })
       .then((response) => {
         if (response.status == 204) {
-          message.success("Organization deleted successfully, please logout and login to Terrakube");
+          message.success("Organization deleted successfully, please logout and login to CodeOps");
         } else {
           message.error("Organization deletion failed");
         }
@@ -146,14 +146,14 @@ export const GeneralSettings = () => {
                   <Radio value="remote">
                     <b>Remote</b>
                     <Typography.Text type="secondary" style={{ display: "block" }}>
-                      Terrakube hosts your plans and applies, allowing you and your team to collaborate and review jobs
+                      CodeOps hosts your plans and applies, allowing you and your team to collaborate and review jobs
                       in the app.
                     </Typography.Text>
                   </Radio>
                   <Radio value="local">
                     <b>Local</b>
                     <Typography.Text type="secondary" style={{ display: "block" }}>
-                      Your planning and applying jobs are performed on your own machines. Terrakube is used just for
+                      Your planning and applying jobs are performed on your own machines. CodeOps is used just for
                       storing and syncing the state.
                     </Typography.Text>
                   </Radio>
@@ -209,7 +209,7 @@ export const GeneralSettings = () => {
         <Button type="default" danger style={{ width: "100%" }}>
           <Space>
             <DeleteOutlined />
-            Delete from Terrakube
+            Delete from CodeOps
           </Space>
         </Button>
       </Popconfirm>

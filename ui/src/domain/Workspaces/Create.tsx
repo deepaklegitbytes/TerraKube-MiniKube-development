@@ -341,7 +341,7 @@ export const CreateWorkspace = () => {
                   href="https://docs.terrakube.io/user-guide/organizations/team-management"
                   rel="noreferrer"
                 >
-                  Terrakube documentation
+                  CodeOps documentation
                 </a>
                 .
               </span>
@@ -410,7 +410,7 @@ export const CreateWorkspace = () => {
           <h2>Create a new Workspace</h2>
           <div>
             <Typography.Text type="secondary" className="App-text">
-              Workspaces determine how Terrakube organizes infrastructure. A workspace contains your configuration
+              Workspaces determine how CodeOps organizes infrastructure. A workspace contains your configuration
               (infrastructure as code), shared variable values, your current and historical state, and run logs.
             </Typography.Text>
           </div>

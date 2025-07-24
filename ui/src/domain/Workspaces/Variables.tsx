@@ -380,7 +380,7 @@ export const Variables = ({
           <Typography.Text type="secondary" className="App-text">
             <p>
               The following values are taken from the collection used by this workspace, these values are injected
-              inside the Terrakube remote jobs.
+              inside the CodeOps remote jobs.
             </p>
           </Typography.Text>
         </div>
@@ -393,7 +393,7 @@ export const Variables = ({
           <Typography.Text type="secondary" className="App-text">
             <p>
               The following values are taken from the organization global variables, these values are injected inside
-              the Terrakube remote jobs.
+              the CodeOps remote jobs.
             </p>
           </Typography.Text>
         </div>

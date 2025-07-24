@@ -215,8 +215,8 @@ export const ActionSettings = () => {
       <h1>Actions</h1>
       <div>
         <Typography.Text type="secondary" className="App-text">
-          Actions are used to extend the Terrakube UI. For example, you can add a new button to restart a VM directly
-          from Terrakube.
+          Actions are used to extend the CodeOps UI. For example, you can add a new button to restart a VM directly
+          from CodeOps.
         </Typography.Text>
       </div>
       {!isEditing ? (

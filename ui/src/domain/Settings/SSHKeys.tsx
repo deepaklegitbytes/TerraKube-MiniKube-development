@@ -117,7 +117,7 @@ export const SSHKeysSettings = () => {
       <h1>SSH Keys</h1>
       <div>
         <Typography.Text type="secondary" className="App-text">
-          Terrakube uses these private SSH keys for downloading private Terraform modules with Git-based sources during
+          CodeOps uses these private SSH keys for downloading private Terraform modules with Git-based sources during
           a Terraform run. SSH keys for downloading modules are assigned per-workspace.
         </Typography.Text>
       </div>

@@ -211,7 +211,7 @@ export const CreateModule = () => {
                   href="https://docs.terrakube.io/user-guide/organizations/team-management"
                   rel="noreferrer"
                 >
-                  Terrakube documentation
+                  CodeOps documentation
                 </a>
                 .
               </span>

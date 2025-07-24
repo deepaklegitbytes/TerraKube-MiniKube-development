@@ -48,12 +48,12 @@ export const ThemeSection = () => {
     {
       value: "default",
       color: "#1890ff",
-      label: "Default (The classic Terrakube theme)",
+      label: "Default (The classic CodeOps theme)",
     },
     {
       value: "terrakube",
       color: "#722ED1",
-      label: "Terrakube (Uses the main Terrakube logo colors)",
+      label: "CodeOps (Uses the main CodeOps logo colors)",
     },
   ];
 
@@ -84,7 +84,7 @@ export const ThemeSection = () => {
         <Flex vertical>
           <Typography.Title className="title">Theme Settings</Typography.Title>
           <Typography.Text type="secondary">
-            Customize the appearance of Terrakube by selecting your preferred color scheme and theme mode.
+            Customize the appearance of CodeOps by selecting your preferred color scheme and theme mode.
           </Typography.Text>
         </Flex>
       </Flex>

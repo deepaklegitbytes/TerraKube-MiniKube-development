@@ -269,7 +269,7 @@ export const WorkspaceGeneral = ({ workspaceData, orgTemplates, manageWorkspace 
             extra={
               "Use this option with terraform remote state/cloud block if you want to execute " +
               getIaCNameById(selectedIac || workspaceData.attributes?.iacType) +
-              " CLI remotely and just upload the state to Terrakube"
+              " CLI remotely and just upload the state to CodeOps."
             }
           >
             <Select

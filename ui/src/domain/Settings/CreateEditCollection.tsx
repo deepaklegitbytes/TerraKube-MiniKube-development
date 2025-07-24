@@ -541,7 +541,7 @@ export const CreateEditCollection = ({ mode, collectionId: propCollectionId }: C
 
           <div style={{ marginBottom: "15px" }}>
             <Typography.Text>
-              You can add any number of variables. Terrakube will use these variables for jobs in the specified
+              You can add any number of variables. CodeOps will use these variables for jobs in the specified
               workspaces.
             </Typography.Text>
           </div>

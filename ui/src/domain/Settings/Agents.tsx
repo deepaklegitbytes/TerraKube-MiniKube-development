@@ -112,7 +112,7 @@ export const AgentSettings = () => {
       <h1>Agents</h1>
       <div>
         <Typography.Text type="secondary" className="App-text">
-          Terrakube uses these agents to execute terraform commands. Terrakube allow to have one or multiple agents to
+          CodeOps uses these agents to execute terraform commands. CodeOps allow to have one or multiple agents to
           run jobs, you can have as many agents as you want for a single organization.
         </Typography.Text>
       </div>
@@ -138,7 +138,7 @@ export const AgentSettings = () => {
                   style={{ width: "20px" }}
                   title={
                     <p>
-                      This will permanently delete this Terrakube Agent <br />
+                      This will permanently delete this CodeOps Agent <br />
                       <br />
                       Are you sure?
                     </p>
@@ -162,8 +162,8 @@ export const AgentSettings = () => {
       <Modal
         width="650px"
         open={visible}
-        title={mode === "edit" ? "Edit Terrakube Agent  " + AgentName : "Add a new Terrakube Agent"}
-        okText="Save Terrakube Agent "
+        title={mode === "edit" ? "Edit CodeOps Agent  " + AgentName : "Add a new CodeOps Agent"}
+        okText="Save CodeOps Agent "
         onCancel={onCancel}
         cancelText="Cancel"
         onOk={() => {

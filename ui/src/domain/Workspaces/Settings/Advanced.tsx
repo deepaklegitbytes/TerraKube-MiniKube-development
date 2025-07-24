@@ -89,7 +89,7 @@ export const WorkspaceAdvanced = ({ workspace, manageWorkspace }: Props) => {
         <Button type="default" danger style={{ width: "100%" }} disabled={!manageWorkspace}>
           <Space>
             <DeleteOutlined />
-            Delete from Terrakube
+            Delete from CodeOps
           </Space>
         </Button>
       </Popconfirm>

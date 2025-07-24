@@ -398,7 +398,7 @@ export const ImportWorkspace = () => {
         <div className="importWorkspace">
           <h2>Import Workspaces</h2>
           <div className="App-text">
-            Easily transfer workspaces from Terraform Cloud and Terraform Enterprise to Terrakube.
+            Easily transfer workspaces from Terraform Cloud and Terraform Enterprise to CodeOps.
           </div>
           <Content hidden={stepsHidden}>
             <Steps direction="horizontal" size="small" current={current} onChange={handleChange}>
@@ -571,7 +571,7 @@ export const ImportWorkspace = () => {
               <Space hidden={step3Hidden} className="chooseType" direction="vertical">
                 <h3>Connect to Platform</h3>
                 <div className="workflowDescription2 App-text">
-                  Provide the API token to connect with Terraform Cloud API. Terrakube will use this token exclusively
+                  Provide the API token to connect with Terraform Cloud API. CodeOps will use this token exclusively
                   for the duration of the migration process and will not store it. For guidance on generating an API
                   token, refer to the{" "}
                   <a href="https://developer.hashicorp.com/terraform/cloud-docs/users-teams-organizations/api-tokens">

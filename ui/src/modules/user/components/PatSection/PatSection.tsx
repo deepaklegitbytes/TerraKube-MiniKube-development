@@ -37,8 +37,8 @@ export const Tokens = () => {
         <Flex vertical>
           <Typography.Title className="title">Personal Access Tokens</Typography.Title>
           <Typography.Text type="secondary">
-            Personal Access Tokens (PAT), also known as API tokens can be used to access the Terrakube API and perform
-            all the actions your user account is entitled to. For more information, see the Terrakube documentation.
+            Personal Access Tokens (PAT), also known as API tokens can be used to access the CodeOps API and perform
+            all the actions your user account is entitled to. For more information, see the CodeOps documentation.
           </Typography.Text>
         </Flex>
         <Button type="primary" onClick={() => setVisible(true)}>

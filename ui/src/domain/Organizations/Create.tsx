@@ -63,13 +63,13 @@ export const CreateOrganization = ({ setOrganizationName }: Props) => {
             message.error(
               <span>
                 You are not authorized to create Organizations. <br /> Please contact your administrator and request to
-                include you in the Terrakube Administrator group. <br /> For more information, visit the{" "}
+                include you in the CodeOps Administrator group. <br /> For more information, visit the{" "}
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://docs.terrakube.io/getting-started/security#administrator-group"
                 >
-                  Terrakube documentation
+                  CodeOps documentation
                 </a>
                 .
               </span>

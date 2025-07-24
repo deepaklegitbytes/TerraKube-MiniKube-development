@@ -354,7 +354,7 @@ export const AddVCS = ({ setMode, loadVCS }: Props) => {
                       type="secondary"
                       style={{ display: "inline", margin: 0, paddingLeft: "5px" }}
                     >
-                      Terrakube ({sessionStorage.getItem(ORGANIZATION_NAME)})
+                      CodeOps ({sessionStorage.getItem(ORGANIZATION_NAME)})
                     </Typography.Paragraph>
                   </li>
                   <li>
@@ -380,7 +380,7 @@ export const AddVCS = ({ setMode, loadVCS }: Props) => {
         return (
           <div>
             <Typography.Text type="secondary" className="paragraph">
-              1. On {renderVCSType(vcsType)}, logged in as whichever account you want Terrakube to act as, add a new
+              1. On {renderVCSType(vcsType)}, logged in as whichever account you want CodeOps to act as, add a new
               OAuth Consumer. You can find the OAuth Consumer settings page under your workspace settings. Enter the
               following information:
             </Typography.Text>
@@ -395,7 +395,7 @@ export const AddVCS = ({ setMode, loadVCS }: Props) => {
                       type="secondary"
                       style={{ display: "inline", margin: 0, paddingLeft: "5px" }}
                     >
-                      Terrakube ({sessionStorage.getItem(ORGANIZATION_NAME)})
+                      CodeOps ({sessionStorage.getItem(ORGANIZATION_NAME)})
                     </Typography.Paragraph>
                   </li>
                   <li>
@@ -467,7 +467,7 @@ export const AddVCS = ({ setMode, loadVCS }: Props) => {
                       type="secondary"
                       style={{ display: "inline", margin: 0, paddingLeft: "5px" }}
                     >
-                      Terrakube
+                      CodeOps
                     </Typography.Paragraph>
                   </li>
                   <li>
@@ -477,7 +477,7 @@ export const AddVCS = ({ setMode, loadVCS }: Props) => {
                       type="secondary"
                       style={{ display: "inline", margin: 0, paddingLeft: "5px" }}
                     >
-                      Terrakube ({sessionStorage.getItem(ORGANIZATION_NAME)})
+                      CodeOps ({sessionStorage.getItem(ORGANIZATION_NAME)})
                     </Typography.Paragraph>
                   </li>
                   <li>
@@ -566,7 +566,7 @@ export const AddVCS = ({ setMode, loadVCS }: Props) => {
                       type="secondary"
                       style={{ display: "inline", margin: 0, paddingLeft: "5px" }}
                     >
-                      Terrakube ({sessionStorage.getItem(ORGANIZATION_NAME)})
+                      CodeOps ({sessionStorage.getItem(ORGANIZATION_NAME)})
                     </Typography.Paragraph>
                   </li>
                   <li>
@@ -767,7 +767,7 @@ export const AddVCS = ({ setMode, loadVCS }: Props) => {
                   href="https://docs.terrakube.io/user-guide/organizations/team-management"
                   rel="noreferrer"
                 >
-                  Terrakube documentation
+                  CodeOps documentation
                 </a>
                 .
               </span>
@@ -781,7 +781,7 @@ export const AddVCS = ({ setMode, loadVCS }: Props) => {
       <h1>Add VCS Provider</h1>
       <div>
         <Typography.Text type="secondary" className="App-text">
-          To connect workspaces and modules to git repositories containing configurations, Terrakube needs access to
+          To connect workspaces and modules to git repositories containing configurations, CodeOps needs access to
           your version control system (VCS) provider.
         </Typography.Text>
       </div>
@@ -830,7 +830,7 @@ export const AddVCS = ({ setMode, loadVCS }: Props) => {
         <Space className="chooseType" direction="vertical">
           <h3>Set up provider</h3>
           <Typography.Text type="secondary" className="paragraph">
-            For additional information about connecting to {renderVCSType(vcsType)} to Terrakube, please read our{" "}
+            For additional information about connecting to {renderVCSType(vcsType)} to CodeOps, please read our{" "}
             <Button className="link" target="_blank" href={getDocsUrl(vcsType)} type="link">
               documentation&nbsp; <HiOutlineExternalLink />.
             </Button>

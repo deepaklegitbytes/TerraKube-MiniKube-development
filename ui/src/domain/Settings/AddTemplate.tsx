@@ -150,7 +150,7 @@ export const AddTemplate = ({ setMode, loadTemplates }: Props) => {
                   href="https://docs.terrakube.io/user-guide/organizations/team-management"
                   rel="noreferrer"
                 >
-                  Terrakube documentation
+                  CodeOps documentation
                 </a>
                 .
               </span>
@@ -211,7 +211,7 @@ export const AddTemplate = ({ setMode, loadTemplates }: Props) => {
         <Space className="chooseType" direction="vertical">
           <h3>Set up template</h3>
           <p className="paragraph">
-            For additional information about templates and custom flows in Terrakube, please read our{" "}
+            For additional information about templates and custom flows in CodeOps, please read our{" "}
             <Button
               className="link"
               target="_blank"

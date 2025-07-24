@@ -347,7 +347,7 @@ export const States = ({
                     <span>
                       Restoring this workspace to its previous state may lead to loss of data. <br /> Any resources that
                       have been added or modified since this state was saved <br /> will no longer be tracked by
-                      Terrakube.
+                      CodeOps.
                     </span>
                   }
                   onConfirm={handleRollback}
