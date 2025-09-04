@@ -39,7 +39,7 @@ export const CLIDriven = ({ organizationName, workspaceName }: Props) => {
                       &nbsp;&nbsp;cloud {"{"} <br />
                       &nbsp;&nbsp;&nbsp;&nbsp;hostname = "{new URL(window._env_.REACT_APP_TERRAKUBE_API_URL).hostname}"
                       <br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;organization = "{organizationName}
+                      &nbsp;&nbsp;&nbsp;&nbsp;cloud = "{organizationName}
                       " <br />
                       <br />
                       &nbsp;&nbsp;&nbsp;&nbsp;workspaces {"{"} <br />
@@ -59,7 +59,7 @@ export const CLIDriven = ({ organizationName, workspaceName }: Props) => {
                       &nbsp;&nbsp;backend "remote" {"{"} <br />
                       &nbsp;&nbsp;&nbsp;&nbsp;hostname = "{new URL(window._env_.REACT_APP_TERRAKUBE_API_URL).hostname}"
                       <br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;organization = "{organizationName}
+                      &nbsp;&nbsp;&nbsp;&nbsp;cloud = "{organizationName}
                       " <br />
                       <br />
                       &nbsp;&nbsp;&nbsp;&nbsp;workspaces {"{"} <br />

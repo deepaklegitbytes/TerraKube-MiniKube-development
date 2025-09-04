@@ -463,15 +463,15 @@ export const CreateEditCollection = ({ mode, collectionId: propCollectionId }: C
         <div style={{ marginBottom: "20px" }}>
           <h1>
             {mode === "create"
-              ? "Create a new organization variable collection"
-              : "Edit organization variable collection"}
+              ? "Create a new cloud variable collection"
+              : "Edit cloud variable collection"}
           </h1>
         </div>
 
         <div style={{ marginBottom: "20px" }}>
           <Typography.Text type="secondary" className="App-text">
             Variable collections allow you to define and apply variables one time across multiple workspaces within an
-            organization.
+            cloud.
           </Typography.Text>
         </div>
 

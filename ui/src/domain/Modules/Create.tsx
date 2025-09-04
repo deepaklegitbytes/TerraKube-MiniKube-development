@@ -257,7 +257,7 @@ export const CreateModule = () => {
         <div className="createWorkspace">
           <h2>Add Module</h2>
           <div className="App-text">
-            This module will be created under the current organization, {sessionStorage.getItem(ORGANIZATION_NAME)}.
+            This module will be created under the current cloud, {sessionStorage.getItem(ORGANIZATION_NAME)}.
           </div>
           <Steps direction="horizontal" size="small" current={current} onChange={handleChange}>
             <Step title="Connect to VCS" />

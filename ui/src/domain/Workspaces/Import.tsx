@@ -585,7 +585,7 @@ export const ImportWorkspace = () => {
                 <Form.Item
                   name="organization"
                   label="Organization"
-                  extra="Organization name where the workspaces are located."
+                  extra="cloud name where the workspaces are located."
                   rules={[{ required: true }]}
                 >
                   <Input placeholder="ex. My-Organization" />
@@ -611,7 +611,7 @@ export const ImportWorkspace = () => {
               <div className="workflowDescription2 App-text">
                 Select one or multiple workspaces that you wish to import. After making your selection, click the
                 'Import' button to initiate the import process. The chosen workspaces will be imported into the
-                organization specified in the previous step.
+                cloud specified in the previous step.
               </div>
               <Spin spinning={workspacesLoading} tip="Loading Workspaces...">
                 <Table

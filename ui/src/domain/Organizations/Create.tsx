@@ -62,7 +62,7 @@ export const CreateOrganization = ({ setOrganizationName }: Props) => {
           if (error.response.status === 403) {
             message.error(
               <span>
-                You are not authorized to create Organizations. <br /> Please contact your administrator and request to
+                You are not authorized to create Clouds. <br /> Please contact your administrator and request to
                 include you in the CodeOps Administrator group. <br /> For more information, visit the{" "}
                 <a
                   target="_blank"
@@ -94,10 +94,10 @@ export const CreateOrganization = ({ setOrganizationName }: Props) => {
       />
       <div className="site-layout-content" >
         <div className="createOrganization">
-          <h1>Create a new organization</h1>
+          <h1>Create a new cloud</h1>
           <div>
             <Typography.Text type="secondary" className="App-text">
-              Organizations are privately shared spaces for teams to collaborate on infrastructure.
+              Clouds are privately shared spaces for teams to collaborate on infrastructure.
             </Typography.Text>
           </div>
           <Form layout="vertical" name="create-org" onFinish={onFinish} validateMessages={validateMessages}>
@@ -105,7 +105,7 @@ export const CreateOrganization = ({ setOrganizationName }: Props) => {
               name="name"
               label="Organization name"
               tooltip="e.g. company-name"
-              extra=" Organization names must be unique and will be part of your resource names used in various tools, for example development, production, finance."
+              extra=" Clouds names must be unique and will be part of your resource names used in various tools, for example development, production, finance."
               rules={[
                 { required: true, message: "This field is required!" },
                 { pattern: /^[a-zA-Z0-9]*$/, message: "Only letters and numbers are allowed!" },
@@ -136,7 +136,7 @@ export const CreateOrganization = ({ setOrganizationName }: Props) => {
 
             <Form.Item>
               <Button type="primary" htmlType="submit">
-                Create organization
+                Create Cloud
               </Button>
             </Form.Item>
           </Form>

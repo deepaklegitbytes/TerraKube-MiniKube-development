@@ -94,7 +94,7 @@ const App = () => {
               }
             })
             .catch((err) => {
-              console.error("Failed to load organization:", err);
+              console.error("Failed to load cloud:", err);
             });
         }
       }
@@ -112,10 +112,10 @@ const App = () => {
     localStorage.clear();
   }
 
-  // if (!auth.isAuthenticated) {
-  //   console.warn("User is not authenticated, redirecting to login");
-  //   return <Login />;
-  // }
+  if (!auth.isAuthenticated) {
+    console.warn("User is not authenticated, redirecting to login");
+    return <Login />;
+  }
 
   const LayoutWrapper = () => (
   <ConfigProvider>

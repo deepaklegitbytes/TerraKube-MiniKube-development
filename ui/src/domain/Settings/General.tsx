@@ -50,9 +50,9 @@ export const GeneralSettings = () => {
       })
       .then((response) => {
         if (response.status == 204) {
-          message.success("Organization updated successfully");
+          message.success("Cloud updated successfully");
         } else {
-          message.error("Organization update failed");
+          message.error("Cloud update failed");
         }
         setWaiting(false);
       });
@@ -77,9 +77,9 @@ export const GeneralSettings = () => {
       })
       .then((response) => {
         if (response.status == 204) {
-          message.success("Organization deleted successfully, please logout and login to CodeOps");
+          message.success("Cloud deleted successfully, please logout and login to CodeOps");
         } else {
-          message.error("Organization deletion failed");
+          message.error("Cloud deletion failed");
         }
       });
   };
@@ -107,7 +107,7 @@ export const GeneralSettings = () => {
         setLoading(false);
       })
       .catch((error) => {
-        message.error("Failed to load organization settings");
+        message.error("Failed to load cloud settings");
         setLoading(false);
       });
   }, [orgid, form]);
@@ -116,12 +116,12 @@ export const GeneralSettings = () => {
     <div className="setting">
       <h1>General Settings</h1>
       {loading || organization === undefined ? (
-        <Spin tip="Loading Organization Settings..." />
+        <Spin tip="Loading Cloud Settings..." />
       ) : (
         <Spin spinning={waiting}>
           <div>
             <Typography.Text type="secondary" className="App-text">
-              Configure general settings for your organization.
+              Configure general settings for your cloud.
             </Typography.Text>
           </div>
           <Form
@@ -160,7 +160,7 @@ export const GeneralSettings = () => {
                 </Space>
               </Radio.Group>
             </Form.Item>
-            <Form.Item label="Organization Icon and Color">
+            {/* <Form.Item label="Organization Icon and Color">
               <Space align="start">
                 <IconSelector value={icon} color={color} onChange={setIcon} />
                 <ColorPicker
@@ -174,19 +174,19 @@ export const GeneralSettings = () => {
                   ]}
                 />
               </Space>
-            </Form.Item>
+            </Form.Item> */}
             <Form.Item>
               <Button type="primary" htmlType="submit">
-                Update organization
+                Update cloud
               </Button>
             </Form.Item>
           </Form>
         </Spin>
       )}
-      <h1>Delete this Organization</h1>
+      <h1>Delete this Cloud</h1>
       <div>
         <Typography.Text type="secondary" className="App-text">
-          Deleting the organization will permanently delete all workspaces associated with it. Please be certain that
+          Deleting the cloud will permanently delete all workspaces associated with it. Please be certain that
           you understand this.
         </Typography.Text>
       </div>
@@ -197,7 +197,7 @@ export const GeneralSettings = () => {
         style={{ width: "100%" }}
         title={
           <p>
-            Organization will be permanently deleted and all workspaces will be marked as deleted <br />
+            Cloud will be permanently deleted and all workspaces will be marked as deleted <br />
             <br />
             Are you sure?
           </p>

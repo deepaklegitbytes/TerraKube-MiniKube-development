@@ -285,7 +285,7 @@ export const EditTeam = ({ mode, setMode, teamId, loadTeams }: Props) => {
                 <></>
               )}
               <Button type="primary" htmlType="submit">
-                {mode === "edit" ? "Update team organization access" : "Create team"}
+                {mode === "edit" ? "Update team cloud access" : "Create team"}
               </Button>
             </Space>
           </Form>

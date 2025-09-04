@@ -38,7 +38,7 @@ export const OrganizationSettings = ({ selectedTab, vcsMode, collectionMode = "l
       setActiveKey(selectedTab);
     }
   }, [selectedTab]);
-
+ 
   // Render appropriate content for Variable Collections tab
   const renderCollectionContent = () => {
     switch (collectionMode) {
@@ -91,7 +91,7 @@ export const OrganizationSettings = ({ selectedTab, vcsMode, collectionMode = "l
   const menuItems: MenuItem[] = [
     {
       type: "group",
-      label: "Organization Settings",
+      label: "Cloud Settings",
       key: "org-settings",
       children: [
         { key: "1", label: "General" },

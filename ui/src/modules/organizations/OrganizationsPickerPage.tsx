@@ -51,19 +51,19 @@ export default function OrganizationsPickerPage() {
 
   return (
     <PageWrapper
-      title="Choose an Organization"
-      subTitle="You have access to the following organizations"
+      title="Choose a Cloud"
+      subTitle="You have access to the following cloud. Select one to continue."
       error={error}
       loading={loading}
-      loadingText="Loading organizations..."
-      breadcrumbs={[{ label: "Organizations", path: "/" }]}
+      loadingText="Loading clouds..."
+      breadcrumbs={[{ label: "Clouds", path: "/" }]}
     >
       {!loading && organizations.length === 0 && (
         <Flex justify="center">
           <Empty
             className="page-wrapper-no-content"
             style={{ textAlign: "center" }}
-            description="You have not created any organizations yet. Create one now to get stared with CodeOps."
+            description="You have not created any clouds yet. Create one now to get stared with CodeOps."
           >
             <Button type="primary">
               <Link to="/organizations/create">Create a new organization</Link>

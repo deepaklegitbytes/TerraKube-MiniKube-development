@@ -18,7 +18,7 @@ export const TemplatesSettings = ({ key }: Props) => {
   const [mode, setMode] = useState("list");
   const [templates, setTemplates] = useState<Template[]>([]);
   const [templateID, setTemplateID] = useState<string>();
-
+  const [templeteAccess, setTempleteAccess] = useState<boolean>(false);
   const onAddVCS = () => {
     setMode("new");
   };
@@ -45,69 +45,90 @@ export const TemplatesSettings = ({ key }: Props) => {
       setLoading(false);
     });
   };
-
+  useEffect(() => {
+    axiosInstance.get(`organization/${orgid}/team`).then((response) => {
+      const access = response.data.data[0];
+      setTempleteAccess(access.attributes.manageTemplate);
+    });
+  }, []);
   return (
-    <div className="setting">
-      {(mode === "new" && <AddTemplate setMode={setMode} loadTemplates={loadTemplates} />) ||
-        (mode === "edit" && (
-          <EditTemplate setMode={setMode} templateId={templateID} loadTemplates={loadTemplates} />
-        )) || (
-          <div>
-            {" "}
-            <h1 style={{ paddingBottom: "10px" }}>
-              Templates
-              <Button type="primary" onClick={onAddVCS} className="addVCS" htmlType="button" icon={<PlusOutlined />}>
-                Add a Template
-              </Button>{" "}
-            </h1>
-            <br />
-            {loading ? (
-              <p>Data loading...</p>
-            ) : (
-              <List
-                className="vcsList"
-                itemLayout="horizontal"
-                dataSource={templates}
-                renderItem={(item) => (
-                  <List.Item
-                    actions={[
-                      <Button
-                        onClick={() => {
-                          onEditVCS(item.id);
-                        }}
-                        icon={<EditOutlined />}
-                        type="link"
-                      >
-                        Edit
-                      </Button>,
-                      <Popconfirm
-                        onConfirm={() => {
-                          onDelete(item.id);
-                        }}
-                        style={{ width: "20px" }}
-                        title={
-                          <p>
-                            This will permanently delete this template. <br />
-                            Are you sure?
-                          </p>
-                        }
-                        okText="Yes"
-                        cancelText="No"
-                      >
-                        {" "}
-                        <Button icon={<DeleteOutlined />} type="link" danger>
-                          Delete
-                        </Button>
-                      </Popconfirm>,
-                    ]}
+    <>
+      {templeteAccess ? (
+        <div className="setting">
+          {(mode === "new" && <AddTemplate setMode={setMode} loadTemplates={loadTemplates} />) ||
+            (mode === "edit" && (
+              <EditTemplate setMode={setMode} templateId={templateID} loadTemplates={loadTemplates} />
+            )) || (
+              <div>
+                {" "}
+                <h1 style={{ paddingBottom: "10px" }}>
+                  Templates
+                  <Button
+                    type="primary"
+                    onClick={onAddVCS}
+                    className="addVCS"
+                    htmlType="button"
+                    icon={<PlusOutlined />}
                   >
-                    <List.Item.Meta title={item.attributes.name} description={item.attributes.description} />
-                  </List.Item>
+                    Add a Template
+                  </Button>{" "}
+                </h1>
+                <br />
+                {loading ? (
+                  <p>Data loading...</p>
+                ) : (
+                  <List
+                    className="vcsList"
+                    itemLayout="horizontal"
+                    dataSource={templates}
+                    renderItem={(item) => (
+                      <List.Item
+                        actions={[
+                          <Button
+                            onClick={() => {
+                              onEditVCS(item.id);
+                            }}
+                            icon={<EditOutlined />}
+                            type="link"
+                          >
+                            Edit
+                          </Button>,
+                          <Popconfirm
+                            onConfirm={() => {
+                              onDelete(item.id);
+                            }}
+                            style={{ width: "20px" }}
+                            title={
+                              <p>
+                                This will permanently delete this template. <br />
+                                Are you sure?
+                              </p>
+                            }
+                            okText="Yes"
+                            cancelText="No"
+                          >
+                            {" "}
+                            <Button icon={<DeleteOutlined />} type="link" danger>
+                              Delete
+                            </Button>
+                          </Popconfirm>,
+                        ]}
+                      >
+                        <List.Item.Meta title={item.attributes.name} description={item.attributes.description} />
+                      </List.Item>
+                    )}
+                  />
                 )}
-              />
+              </div>
             )}
-          </div>
-        )}
-    </div>
+        </div>
+      ) : (
+        <div className="setting">
+          <h1 style={{ paddingBottom: "10px" }}>Templates</h1>
+          <br />
+          <p>You don't have access to manage templates</p>
+        </div>
+      )}
+    </>
   );
 };

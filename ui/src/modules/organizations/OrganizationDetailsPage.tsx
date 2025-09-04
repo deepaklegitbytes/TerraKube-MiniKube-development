@@ -46,7 +46,7 @@ export default function OrganizationsDetailPage({ organizationName, setOrganizat
   return (
     <PageWrapper
       title="Workspaces"
-      subTitle={`Workspaces in the ${organizationName} organization`}
+      subTitle={`Workspaces in the ${organizationName} cloud`}
       loadingText="Loading workspaces..."
       loading={loading}
       error={error}

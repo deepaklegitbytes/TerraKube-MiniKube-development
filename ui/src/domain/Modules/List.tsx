@@ -88,7 +88,7 @@ export const ModuleList = ({ setOrganizationName, organizationName }: Props) => 
   return (
     <PageWrapper
       title="Modules"
-      subTitle={`Modules in the ${organizationName} organization`}
+      subTitle={`Modules in the ${organizationName} cloud`}
       loadingText="Loading modules..."
       loading={loading}
       breadcrumbs={[

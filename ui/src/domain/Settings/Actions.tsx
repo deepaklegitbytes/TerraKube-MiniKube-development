@@ -215,8 +215,8 @@ export const ActionSettings = () => {
       <h1>Actions</h1>
       <div>
         <Typography.Text type="secondary" className="App-text">
-          Actions are used to extend the CodeOps UI. For example, you can add a new button to restart a VM directly
-          from CodeOps.
+          Actions are used to extend the CodeOps UI. For example, you can add a new button to restart a VM directly from
+          CodeOps.
         </Typography.Text>
       </div>
       {!isEditing ? (
@@ -228,7 +228,15 @@ export const ActionSettings = () => {
           {loading || !actions ? (
             <p>Data loading...</p>
           ) : (
-            <Table dataSource={actions} columns={ACTIONS_COLUMNS(onEdit)} rowKey="id" />
+            <Table
+              style={{
+                width: "116%",
+                maxWidth: "110%",
+              }}
+              dataSource={actions}
+              columns={ACTIONS_COLUMNS(onEdit)}
+              rowKey="id"
+            />
           )}
         </>
       ) : (

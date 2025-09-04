@@ -1,9 +1,15 @@
 import {
+  AmazonOutlined,
   AppstoreOutlined,
   CloudOutlined,
+  CloudServerOutlined,
   DownCircleOutlined,
+  GoogleOutlined,
+  GroupOutlined,
   PlusCircleOutlined,
   SettingOutlined,
+  UsergroupAddOutlined,
+  WindowsOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
 import { AxiosResponse } from "axios";
@@ -14,6 +20,10 @@ import axiosInstance from "../../config/axiosConfig";
 import { ApiResponse, FlatOrganization, Organization } from "../types";
 import "./Home.css";
 import { ThemeMode } from "../../config/themeConfig";
+// import AWSIcon from "../../Icons/AWSIcons";
+// import AzureCloudIcon from "../../Icons/AzureIcons";
+// import GoogleCloudIcon from "../../Icons/GCPIcons";
+import AzureCloudIcon2 from "../../Icons/AzureIcons2";
 
 type Props = {
   organizationName: string;
@@ -43,7 +53,7 @@ const ensureOrganizationName = (
           onComplete();
         }
       })
-      .catch((error) => console.error("Failed to fetch organization:", error));
+      .catch((error) => console.error("Failed to fetch cloud:", error));
   }
 };
 
@@ -114,31 +124,33 @@ export const MainMenu = ({ organizationName, setOrganizationName }: Props) => {
 
   const items = [
     {
-      label: organizationName,
+      label: "Clouds",
       key: "organization-name",
-      icon: <DownCircleOutlined />,
-      children: [
-        {
-          label: "Create new organization",
-          key: "new",
-          icon: <PlusCircleOutlined />,
-          onClick: handleClick,
-        },
-        {
-          type: "divider",
-        },
-        {
-          type: "group",
-          label: "Organizations",
-          children: orgs
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map((org) => ({
-              label: org.name,
-              key: org.id,
-              onClick: handleClick,
-            })),
-        },
-      ],
+      icon: <CloudServerOutlined />,
+      children: orgs
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map((org) => {
+          let icon;
+          switch (org.name.toLowerCase()) {
+            case "aws":
+              icon = <AmazonOutlined />;
+              break;
+            case "azure":
+              icon = <AzureCloudIcon2 />;
+              break;
+            case "gcp":
+              icon = <GoogleOutlined />;
+              break;
+            default:
+              icon = null;
+          }
+          return {
+            label: org.name,
+            key: org.id,
+            icon,
+            onClick: handleClick,
+          };
+        }),
     },
     ...(organizationId
       ? [

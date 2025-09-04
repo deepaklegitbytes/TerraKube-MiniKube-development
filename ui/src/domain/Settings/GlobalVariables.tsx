@@ -179,7 +179,7 @@ export const GlobalVariablesSettings = () => {
       <div>
         <Typography.Text type="secondary" className="App-text">
           Global Variables allow you to define and apply variables one time across multiple workspaces within an
-          organization.
+          cloud.
         </Typography.Text>
       </div>
       <Button type="primary" onClick={onNew} htmlType="button" icon={<PlusOutlined />}>

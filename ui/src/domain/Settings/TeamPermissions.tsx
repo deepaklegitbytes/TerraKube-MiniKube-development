@@ -11,22 +11,22 @@ const permissionItems = [
   {
     name: "manageCollection",
     label: "Manage Collections",
-    tooltip: "Allow members to create and manage all collections within the organization",
+    tooltip: "Allow members to create and manage all collections within the cloud",
   },
   {
     name: "manageJob",
     label: "Manage Jobs",
-    tooltip: "Allow members to create jobs inside the organization",
+    tooltip: "Allow members to create jobs inside the cloud",
   },
   {
     name: "manageModule",
     label: "Manage Modules",
-    tooltip: "Allow members to create and administrate all modules within the organization",
+    tooltip: "Allow members to create and administrate all modules within the cloud",
   },
   {
     name: "manageProvider",
     label: "Manage Providers",
-    tooltip: "Allow members to create and administrate all providers within the organization",
+    tooltip: "Allow members to create and administrate all providers within the cloud",
   },
   {
     name: "manageState",
@@ -37,17 +37,17 @@ const permissionItems = [
   {
     name: "manageTemplate",
     label: "Manage Templates",
-    tooltip: "Allow members to create and administrate all Templates within the organization",
+    tooltip: "Allow members to create and administrate all Templates within the cloud",
   },
   {
     name: "manageVcs",
     label: "Manage VCS Settings",
-    tooltip: "Allow members to create and administrate all VCS Settings within the organization",
+    tooltip: "Allow members to create and administrate all VCS Settings within the cloud",
   },
   {
     name: "manageWorkspace",
     label: "Manage Workspaces",
-    tooltip: "Allow members to create and administrate all workspaces within the organization",
+    tooltip: "Allow members to create and administrate all workspaces within the cloud",
   },
 ];
 

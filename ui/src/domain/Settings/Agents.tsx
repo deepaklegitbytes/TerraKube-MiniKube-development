@@ -113,7 +113,7 @@ export const AgentSettings = () => {
       <div>
         <Typography.Text type="secondary" className="App-text">
           CodeOps uses these agents to execute terraform commands. CodeOps allow to have one or multiple agents to
-          run jobs, you can have as many agents as you want for a single organization.
+          run jobs, you can have as many agents as you want for a single cloud.
         </Typography.Text>
       </div>
       <Button type="primary" onClick={onNew} htmlType="button" icon={<PlusOutlined />}>

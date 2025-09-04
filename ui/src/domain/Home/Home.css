@@ -35,3 +35,6 @@
 .avatar-hover-effect:hover {
   color: #fff;
 }
+.ant-menu-title-content{
+  margin-left: 10px;
+}

@@ -77,7 +77,7 @@ export const WorkspaceAdvanced = ({ workspace, manageWorkspace }: Props) => {
         style={{ width: "100%" }}
         title={
           <p>
-            Workspace will be permanently deleted <br /> from this organization.
+            Workspace will be permanently deleted <br /> from this cloud.
             <br />
             Are you sure?
           </p>

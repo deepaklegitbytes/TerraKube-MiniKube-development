@@ -224,7 +224,7 @@ export const VCSSettings = ({ vcsMode }: Props) => {
                             <Typography.Text type="secondary">
                               Connecting to {renderVCSType(item.attributes.vcsType)} will take your{" "}
                               {renderVCSType(item.attributes.vcsType)} user through the OAuth flow to create an
-                              authorization token for access to all repositories for this organization. This means that
+                              authorization token for access to all repositories for this cloud. This means that
                               your currently logged in {renderVCSType(item.attributes.vcsType)} user token will be used
                               for all {renderVCSType(item.attributes.vcsType)} API interactions by any CodeOps user
                               anywhere within the scope of <b>{sessionStorage.getItem(ORGANIZATION_NAME)}</b>.
@@ -234,7 +234,7 @@ export const VCSSettings = ({ vcsMode }: Props) => {
                               A connection was made on {item.attributes.createdDate} by authenticating via OAuth as{" "}
                               {renderVCSType(item.attributes.vcsType)} user <b>{item.attributes.createdBy}</b>, which
                               assigned an OAuth token for use by all CodeOps users in the{" "}
-                              <b>{sessionStorage.getItem(ORGANIZATION_NAME)}</b> organization.
+                              <b>{sessionStorage.getItem(ORGANIZATION_NAME)}</b> cloud.
                             </Typography.Text>
                           )}
                         </Col>

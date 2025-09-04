@@ -392,7 +392,7 @@ export const Variables = ({
         <div>
           <Typography.Text type="secondary" className="App-text">
             <p>
-              The following values are taken from the organization global variables, these values are injected inside
+              The following values are taken from the cloud global variables, these values are injected inside
               the CodeOps remote jobs.
             </p>
           </Typography.Text>

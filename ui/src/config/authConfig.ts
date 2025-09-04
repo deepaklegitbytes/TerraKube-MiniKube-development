@@ -9,7 +9,7 @@ export const oidcConfig = {
   scope: window._env_.REACT_APP_SCOPE,
   userStore: new WebStorageStateStore({ store: window.localStorage }),
 };
-
+console.log("OIDC Config:", oidcConfig);
 export const mgr = new UserManager(oidcConfig);
 
 export const useAuth = (): AuthContextProps => {

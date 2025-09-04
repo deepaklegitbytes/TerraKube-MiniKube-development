@@ -542,7 +542,7 @@ export const AddVCS = ({ setMode, loadVCS }: Props) => {
                 <span>:</span>
               ) : (
                 <span>
-                  , install it to your organization or account, and grant necessary permissions. Please check
+                  , install it to your cloud or account, and grant necessary permissions. Please check
                   <Button
                     className="link"
                     target="_blank"

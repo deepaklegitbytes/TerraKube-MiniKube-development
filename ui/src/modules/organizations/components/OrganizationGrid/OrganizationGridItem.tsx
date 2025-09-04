@@ -3,6 +3,9 @@ import stringToDeterministicColor from "@/modules/utils/stringToDeterministicCol
 import { OrganizationModel } from "../../types";
 import * as FaIcons from "react-icons/fa6";
 import { ORGANIZATION_ARCHIVE, ORGANIZATION_NAME } from "../../../../config/actionTypes";
+import AWSIcon from "../../../../Icons/AWSIcons";
+import AzureCloudIcon from "../../../../Icons/AzureIcons";
+import GoogleCloudIcon from "../../../../Icons/GCPIcons";
 const DEFAULT_ICON = "FaBuilding";
 const DEFAULT_COLOR = "#000000";
 
@@ -21,9 +24,20 @@ function parseIconField(iconField: string | undefined, orgId: string): { iconNam
 }
 
 // Helper to get the icon component
-function getOrgIcon(iconName: string, color: string) {
-  const IconComponent = FaIcons[(iconName as keyof typeof FaIcons) || DEFAULT_ICON] || FaIcons[DEFAULT_ICON];
-  return <IconComponent style={{ color, fontSize: 40 }} />;
+function getOrgIcon(organization: OrganizationModel) {
+  switch (organization.name.toLowerCase()) {
+    case "aws":
+      return <AWSIcon size={40} />;
+      break;
+    case "azure":
+      return <AzureCloudIcon size={40}/>;
+      break;
+    case "gcp":
+      return <GoogleCloudIcon size={40} />;
+      break;
+    default:
+      return null;
+  }
 }
 
 type Props = {
@@ -31,7 +45,7 @@ type Props = {
 };
 
 export default function OrganizationGridItem({ organization }: Props) {
-  const { iconName, color } = parseIconField(organization.icon, organization.id);
+  // const { iconName, color } = parseIconField(organization.icon, organization.id);
 
   const handleOrganizationClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -47,13 +61,13 @@ export default function OrganizationGridItem({ organization }: Props) {
   return (
     <Card hoverable style={{ width: "100%" }} onClick={handleOrganizationClick}>
       <Flex gap="small" align="center">
-        <div className="org-card-icon">{getOrgIcon(iconName, color)}</div>
+        <div className="org-card-icon">{getOrgIcon(organization)}</div>
         <Flex vertical gap="0">
           <Typography.Text className="org-card-title" ellipsis>
             {organization.name}
           </Typography.Text>
           <Typography.Text type="secondary">
-            {organization.description || "No description set for this organization"}
+            {organization.description || "No description set for this cloud"}
           </Typography.Text>
         </Flex>
       </Flex>
