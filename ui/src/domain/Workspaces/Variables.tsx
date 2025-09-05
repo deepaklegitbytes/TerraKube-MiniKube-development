@@ -431,7 +431,7 @@ export const Variables = ({
                   <Radio value="TERRAFORM" style={{ display: "flex", alignItems: "flex-start" }}>
                     <div>
                       <div>Terraform variable</div>
-                      <div style={{ color: "rgba(0,0,0,0.45)", fontSize: "14px" }}>
+                      <div style={{ color: "#ffffff", fontSize: "14px" }}>
                         These variables should match the declarations in your configuration. Click the HCL box to use
                         interpolation or set a non-string value.
                       </div>
@@ -441,7 +441,7 @@ export const Variables = ({
                   <Radio value="ENV" style={{ display: "flex", alignItems: "flex-start" }}>
                     <div>
                       <div>Environment variable</div>
-                      <div style={{ color: "rgba(0,0,0,0.45)", fontSize: "14px" }}>
+                      <div style={{ color: "#ffffff", fontSize: "14px" }}>
                         These variables are available in the Terraform runtime environment.
                       </div>
                     </div>
